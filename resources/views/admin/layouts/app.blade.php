@@ -33,6 +33,41 @@
             font-size: 12px;
             text-transform: uppercase;
         }
+        /* Pagination styling - force Bootstrap 5 style */
+        .pagination {
+            display: flex !important;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            gap: 2px;
+        }
+        .pagination svg {
+            display: none !important; /* Hide Tailwind SVG icons */
+        }
+        .pagination span, .pagination a {
+            position: relative;
+            display: block;
+            padding: 0.375rem 0.75rem;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #0d6efd;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+        }
+        .pagination .active span, .pagination .current {
+            z-index: 3;
+            color: #fff !important;
+            background-color: #0d6efd !important;
+            border-color: #0d6efd !important;
+        }
+        .pagination .disabled span, .pagination .disabled a {
+            color: #6c757d !important;
+            pointer-events: none;
+            background-color: #fff;
+            border-color: #dee2e6;
+        }
     </style>
 
     @stack('styles')
